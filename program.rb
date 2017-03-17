@@ -11,3 +11,4 @@ http_reader.get('http://api.postcodes.io/postcodes/tw91ep/nearest')
 
 puts 'POST request'
 http_reader.post('http://api.postcodes.io/postcodes', {postcodes: ['TW91EP', 'EC1V9JS']})
+puts http_reader.get_status(response)

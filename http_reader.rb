@@ -4,12 +4,17 @@ require 'json'
 class HttpReader
 	def get(url)
 		response = RestClient.get(url)
-		puts response
+		response
 	end
 
 	def post(url, body)
 		response = RestClient.post(url, body)
-		puts response
+		response
+	end
+
+	def get_status(response)
+		result = JSON.parse(response)
+		puts result['status']
 	end
 end
 
